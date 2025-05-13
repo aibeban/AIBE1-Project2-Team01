@@ -12,9 +12,8 @@ import lombok.*;
 public class UserAccount {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "id", length = 36, nullable = false)
-    private String id;
+    @Column(name = "user_id", length = 36, nullable = false)
+    private String userId;
 
     @Column(nullable = false, length = 255)
     private String email;
@@ -29,5 +28,5 @@ public class UserAccount {
     private boolean admin = false;
 
     @Column
-    private Boolean banned;
+    private boolean banned;
 }
